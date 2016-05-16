@@ -2,9 +2,9 @@
 本插件主要是用于页面元素hover提示，或者设置confirm页面和message box页面
 
 ####1.使用方法
-|| tooltip        | confirm           | message  |
-|：-----：| :-------------: |:-------------:| -----:|
-|options| ("tooltip", cssStyleObject)  | ("confirm", {}, submitFun, cancelFun) | ("message", {}, submitFun, cancelFun) |
+| tooltip        | confirm           | message  |
+| :-------------: |:-------------:| -----:|
+| ("tooltip", cssStyleObject)  | ("confirm", {}, submitFun, cancelFun) | ("message", {}, submitFun, cancelFun) |
 ~~~javascript
     $.message("tooltip", {
         backgroundColor: "rgba(0, 0, 0, .8)",
