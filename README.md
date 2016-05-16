@@ -1,7 +1,7 @@
 # messageTool
 本插件主要是用于页面元素hover提示，或者设置confirm页面和message box页面
 
-####1.使用方法
+####使用方法
 | tooltip        | confirm / message|
 | :-------------: |:-------------:|
 | ("tooltip", cssStyleObject)  | ("confirm", {setptions}, submitFun, cancelFun) |
