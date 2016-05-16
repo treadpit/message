@@ -2,9 +2,10 @@
 本插件主要是用于页面元素hover提示，或者设置confirm页面和message box页面
 
 ####1.使用方法
-| tooltip        | confirm           | message  |
-| :-------------: |:-------------:| -----:|
-| ("tooltip", cssStyleObject)  | ("confirm", {}, submitFun, cancelFun) | ("message", {}, submitFun, cancelFun) |
+| tooltip        | confirm / message|
+| :-------------: |:-------------:|
+| ("tooltip", cssStyleObject)  | ("confirm", {setptions}, submitFun, cancelFun) |
+>1.tooptips使用示例
 ~~~javascript
     $.message("tooltip", {
         backgroundColor: "rgba(0, 0, 0, .8)",
@@ -13,7 +14,10 @@
         color: "#fff",
         maxWidth: "480px"
     });
-    $("#del").click(function() {
+~~~
+>2.confirm/message示例
+~~~javascript
+    $("selector").click(function() {
         $.message("confirm", {
             title: "删除电影",
             content: "确认删除这些电影？",
