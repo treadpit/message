@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <button id="del" data-tooltip="直接格式化硬盘上所有的电影！" >删除</button>
+    <input type="text" data-regex = 'mail'>
+    <script src="jquery.message.js"></script>
+    <script>
+        $.message("tooltip", {
+            backgroundColor: "rgba(0, 0, 0, .8)",
+            padding: "5px 10px",
+            borderRadius: "8px",
+            color: "#fff",
+            maxWidth: "480px"
+        });
+        $("#del").click(function() {
+            $.message("confirm", {
+                title: "删除电影",
+                content: "确认删除这些电影？",
+                submit: "立马删除",
+                cancel: "算咯吧，留着用",
+                style: {
+                    bg: {},
+                    wrap: {
+                        width: "600px"
+                    },
+                    title: {},
+                    content: {},
+                    button: {},
+                    buttonSubmit: {},
+                    buttonCancel: {}
+
+                }
+            }, function(){
+                alert("submit");
+                $(".msg-bg").fadeOut("fast");
+            }, function() {
+                $(".msg-bg").fadeOut("fast");
+            })
+        });
+
+    </script>
+</body>
+</html>
