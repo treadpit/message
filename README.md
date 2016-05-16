@@ -2,11 +2,9 @@
 本插件主要是用于页面元素hover提示，或者设置confirm页面和message box页面
 
 ####1.使用方法
-| Tables        | Are           | Cool  |
-| :-------------: |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+|| tooltip        | confirm           | message  |
+|：-----：| :-------------: |:-------------:| -----:|
+|options| ("tooltip", cssStyleObject)  | ("confirm", {}, submitFun, cancelFun) | ("message", {}, submitFun, cancelFun) |
 ~~~javascript
     $.message("tooltip", {
         backgroundColor: "rgba(0, 0, 0, .8)",
