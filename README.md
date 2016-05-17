@@ -4,11 +4,12 @@
 ####使用方法
 | type    |   options  |
 | :-----: |:----------:|
-| tooltip"| ("tooltip", cssStyleObject) |
-| confirm |("confirm", {setptions}, submitFun, cancelFun) |
-| message |("message", {setptions}, submitFun)  |
+| tooltip | cssStyleObject |
+| confirm | {setptions}, submitFun, cancelFun |
+| message |{setptions}, submitFun  |
+| shortmessage |{setptions}, submitFun |
 
->1.tooptip使用示例
+>1.tooptip工具
 
     1)页面中对需要使用tooltip的元素，加上 data-tooltip=‘提示语’ 属性即可。
     
@@ -19,7 +20,7 @@
     2)然后在页面引入的js文件中调用$.message("tooltip", {样式配置，参照jquery设置css格式})
     
 ~~~javascript
-    $.message("tooltip", {
+    $.message({
         backgroundColor: "rgba(0, 0, 0, .8)",
         padding: "5px 10px",
         borderRadius: "8px",
@@ -27,29 +28,31 @@
         maxWidth: "480px"
     });
 ~~~
->2.confirm/message示例
+>2.confirm确认弹出框
 ~~~javascript
     $("selector").click(function() {
-        $.message("confirm", {
-            title: "删除电影",
-            content: "确认删除这些电影？",
-            submit: "立马删除",
-            cancel: "算咯吧，留着用",
+        $.confirm({
+            title: "删除电影", //弹出框标题
+            content: "确认删除这些电影？", //消息文本内容，也可以为任意可解析的HTML代码
+            submit: "立马删除", //确认按钮文字
+            cancel: "算咯吧，留着用",  //取消按钮文字
             style: {
-                bg: {},
+                bg: {}, //弹出层背景样式
                 wrap: {
-                    width: "600px"
+                    width: "600px" //弹出层盒子样式
                 },
-                title: {},
-                content: {},
-                button: {},
-                buttonSubmit: {},
-                buttonCancel: {}
+                title: {}, //标题样式
+                content: {}, //内容样式
+                button: {}, //按钮样式
+                buttonSubmit: {}, // 提交按钮样式单独定义
+                buttonCancel: {}  // 取消按钮样式单独定义
             }
         }, function(){
+            //提交按钮点击事件
             alert("submit");
             $(".msg-bg").fadeOut("fast");
         }, function() {
+            //取消按钮点击事件
             $(".msg-bg").fadeOut("fast");
         })
     });
