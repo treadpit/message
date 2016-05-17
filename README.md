@@ -3,10 +3,10 @@
 
 ####使用方法
 | type    |   options  |
-| :-----: |:----------:|
+| :----- |:----------|
 | tooltip | cssStyleObject |
 | confirm | {setptions}, submitFun, cancelFun |
-| message |{setptions}, submitFun  |
+| message |{setptions}, [submitFun]  |
 | shortmessage |{setptions}, submitFun |
 
 >1.tooptip工具
@@ -28,7 +28,9 @@
         maxWidth: "480px"
     });
 ~~~
+
 >2.confirm确认弹出框
+
 ~~~javascript
     $("selector").click(function() {
         $.confirm({
@@ -55,5 +57,20 @@
             //取消按钮点击事件
             $(".msg-bg").fadeOut("fast");
         })
+    });
+~~~
+
+>3.message通知消息弹出框
+
+~~~javascript
+    $("selector").click(function() {
+         $.message({
+                content: "已经成功格式化硬盘！",
+                submit: "ok"
+            }, function () {
+                //点击确定按钮执行事件
+                alert("好的，知道了...");
+            }
+        )
     });
 ~~~
