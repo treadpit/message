@@ -1,4 +1,4 @@
-# messageTool
+# message
 本插件主要是用于页面元素hover提示，或者设置confirm页面和message box页面
 
 ####使用方法
@@ -38,17 +38,6 @@
             content: "确认删除这些电影？", //消息文本内容，也可以为任意可解析的HTML代码
             submit: "立马删除", //确认按钮文字
             cancel: "算咯吧，留着用",  //取消按钮文字
-            style: {
-                bg: {}, //弹出层背景样式
-                wrap: {
-                    width: "600px" //弹出层盒子样式
-                },
-                title: {}, //标题样式
-                content: {}, //内容样式
-                button: {}, //按钮样式
-                buttonSubmit: {}, // 提交按钮样式单独定义
-                buttonCancel: {}  // 取消按钮样式单独定义
-            }
         }, function(){
             //提交按钮点击事件
             alert("submit");
