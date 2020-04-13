@@ -1,7 +1,8 @@
 # message
 本插件主要是用于页面元素hover提示，或者设置confirm页面和message box页面
 
-####使用方法
+#### 使用方法
+
 | type    |   options  |
 | :----- |:----------|
 | tooltip | cssStyleObject |
